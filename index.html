@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon River - Сеть бутиков ювелирных изделий</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=c6d7c3f0-3dee-4173-bc5e-8b6d9f53c8e6&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__bar container">
+        <a class="logo-link" href="#"
+          ><img class="logo" src="img/logo-header.png" alt="Moon River Logo" />
+          <h1 class="logo-link__title">Главная страница магазина ювелирных украшений</h1></a
+        >
+        <ul class="user-panel">
+          <li class="user-panel__item">
+            <button class="user-panel__btn user-panel__btn--favorites" aria-label="Избранное"></button>
+          </li>
+          <li class="user-panel__item">
+            <button class="user-panel__btn user-panel__btn--account" aria-label="Личный кабинет"></button>
+          </li>
+          <li class="user-panel__item">
+            <button
+              class="user-panel__btn user-panel__btn--cart user-panel__btn--cart-null"
+              aria-label="Корзина"
+            >
+              0
+            </button>
+          </li>
+          <li class="user-panel__item">
+            <button class="user-panel__btn user-panel__btn--menu" aria-label="Меню"></button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="popup-cart">
+        <ul class="popup-cart__list">
+          <li class="popup-cart__item">
+            <div class="popup-cart__img">
+              <img src="img/ring-cartier-jows.png" alt="КОЛЬЦО jow’s, Cartier" />
+            </div>
+            <div class="popup-cart__name">КОЛЬЦО jow’s, Cartier</div>
+            <div class="popup-cart__description">Белое золото, бриллианты</div>
+            <div class="popup-cart__price">674 000 ₽</div>
+            <div class="popup-cart__quantity">5</div>
+            <button class="popup-cart__delete"></button>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu container">
+          <li class="menu__item menu__item--active">
+            <a class="menu__link menu__link--active" href="#">Ювелирные&nbsp;изделия</a>
+            <ul class="submenu container">
+              <li class="submenu__item item-submenu">
+                <h3 class="item-submenu__title">для кого</h3>
+                <ul class="subsubmenu">
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Для женщин</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Для мужчин</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Для детей</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="submenu__item item-submenu">
+                <h3 class="item-submenu__title">Категории</h3>
+                <ul class="subsubmenu">
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Кольца</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Браслеты</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Колье</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Серьги</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Броши</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="submenu__item item-submenu">
+                <h3 class="item-submenu__title">материал</h3>
+                <ul class="subsubmenu">
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Изделия с бриллиантами</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Браслеты</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Желтое золото</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Белое золото</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Розовое золото</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="submenu__item item-submenu">
+                <h3 class="item-submenu__title">бренд</h3>
+                <ul class="subsubmenu">
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Mercury</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Chopard</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Cartier</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">Graff</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link" href="#">РGarrard</a>
+                  </li>
+                  <li class="subsubmenu__item">
+                    <a class="subsubmenu__link subsubmenu__link--last" href="#">Показать все бренды</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">часы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">ароматы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">бренды</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">изделия&nbsp;из&nbsp;кожи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Свадебны&nbsp;украшения</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">другое</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-footer container">
+        <div class="menu-footer__wrapper">
+          <div class="menu-banner">
+            <a class="menu-banner__link" href="#">
+              <p class="menu-banner__subtitle">Новая коллекция by Mercury</p>
+              <h3 class="menu-banner__title">JUSTE UN CLOU</h3>
+              <p class="menu-banner__text">Cмотреть коллекцию</p>
+            </a>
+          </div>
+          <div class="menu-footer__box">
+            <div class="menu-footer__contact">
+              <h3 class="footer__title">телефон горячей линии</h3>
+              <address class="footer__address">
+                <a class="footer__telephone" href="tel:+7800456456">+7 800 456 456</a>
+              </address>
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a class="social-list__link social-list__link--fb" href="#"></a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link social-list__link--instagram" href="#"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__subscription">
+              <h3 class="footer__title">подпишитесь на новости</h3>
+              <form class="footer__form form-footer form">
+                <input type="text" class="form-footer__input form__input" id="email-3" required />
+                <span class="form-footer__bar form__bar"></span>
+                <label class="form-footer__label form__label" for="email-3">Введите E-mail</label>
+                <button class="form-footer__btn form__btn" aria-label="Отправить"></button>
+              </form>
+              <ul class="app-list">
+                <li class="app-list__item">
+                  <a class="app-list__link app-list__link--iphone" href="#"></a>
+                </li>
+                <li class="app-list__item">
+                  <a class="app-list__link app-list__link--android" href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section-first">
+        <div class="section-first__main container">
+          <div class="section-first__box">
+            <h2 class="section-first__title">HIGH JEWELRY</h2>
+            <a class="section-first__link" href="#">Смотреть коллекцию</a>
+          </div>
+          <a class="section-first__product-link" href="#"
+            ><img
+              class="section-first__product-img"
+              src="img/ring-cartier-trinity.png"
+              alt="Кольцо Trinity Cartier"
+          /></a>
+        </div>
+        <div class="section-first__footer container">
+          <ul class="lang-select">
+            <li class="lang-select__item">
+              <button class="lang-select__btn lang-select__btn--active">RU</button>
+            </li>
+            <li class="lang-secect__item">
+              <button class="lang-select__btn">EN</button>
+            </li>
+          </ul>
+          <article class="product">
+            <div class="product__item product__item--name">
+              <h3>КОЛЬЦО TRINITY, Cartier</h3>
+            </div>
+            <div class="product__item product__item--description">
+              Белое золото, бриллианты
+            </div>
+            <div class="product__item product__item--price">
+              498 000 &#8381;
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section-two">
+        <div class="section-two__wrapper">
+          <a class="section-two__link section-two__link--man" href="#"
+            ><p class="section-two__subtitle">Перейти в раздел</p>
+            <h2 class="section-two__title">Для мужчин</h2></a
+          >
+        </div>
+        <div class="section-two__wrapper">
+          <a class="section-two__link section-two__link--woman" href="#"
+            ><p class="section-two__subtitle">Перейти в раздел</p>
+            <h2 class="section-two__title">Для женщин</h2></a
+          >
+        </div>
+      </section>
+      <section class="section-navigation">
+        <div class="section-navigation__box container">
+          <h2 class="section-navigation__title">
+            Найди<br />
+            бутик около себя
+          </h2>
+          <p class="section-navigation__subtitle">
+            Введите свой адрес и узнайте о самых ближайших бутиках к вам
+          </p>
+          <form class="section-navigation__form form" name="formnav">
+            <input
+              type="text"
+              name="inputnav"
+              class="section-navigation__input form__input"
+              id="shop-adress"
+            />
+            <span class="section-navigation__bar form__bar"></span>
+            <label class="section-navigation__label form__label" for="shop-adress"
+              >Введите название города</label
+            >
+            <button type="button" class="section-navigation__btn form__btn" aria-label="Отправить"></button>
+          </form>
+        </div>
+        <div id="section-navigation__map"></div>
+      </section>
+      <section class="section-product">
+        <h2 class="section-product__title">Ювелирные товары</h2>
+        <ul class="section-product__grid">
+          <li class="section-product__item item-product item-product--one">
+            <article class="item-product__article">
+              <button class="item-product__btn">
+                <div class="item-product__picture">
+                  <img
+                    class="iten-product__img"
+                    src="img/ring-cartier-jows.png"
+                    alt="КОЛЬЦО jow’s, Cartier"
+                  />
+                </div>
+                <div class="item-product__name">
+                  <h3>КОЛЬЦО jow’s, Cartier</h3>
+                </div>
+                <div class="item-product__description">
+                  Белое золото, бриллианты
+                </div>
+                <div class="item-product__price">
+                  674 000 ₽
+                </div>
+              </button>
+            </article>
+          </li>
+          <li class="section-product__item item-product item-product--two">
+            <article class="item-product__article">
+              <button class="item-product__btn">
+                <div class="item-product__picture">
+                  <img
+                    class="iten-product__img"
+                    src="img/ring-cartier-croix.png"
+                    alt="КОЛЬЦО croix, Cartier"
+                  />
+                </div>
+                <div class="item-product__name">
+                  <h3>КОЛЬЦО croix, Cartier</h3>
+                </div>
+                <div class="item-product__description">
+                  Желтое, белое, розовое золото
+                </div>
+                <div class="item-product__price">
+                  432 000 ₽
+                </div>
+              </button>
+            </article>
+          </li>
+          <li class="section-product__item item-product item-product--three-big">
+            <article class="item-product__article">
+              <button class="item-product__btn">
+                <div class="item-product__picture-big">
+                  <img
+                    class="iten-product__img"
+                    src="img/necklace-etoile-hublot.jpg"
+                    alt="Колье etoile, HUBLOT"
+                  />
+                </div>
+                <div class="item-product__name item-product__name--big">
+                  <h3>Колье etoile, HUBLOT</h3>
+                </div>
+                <div class="item-product__description item-product__description--big">
+                  Белое золото, бриллианты
+                </div>
+                <div class="item-product__price">
+                  539 000 ₽
+                </div>
+              </button>
+            </article>
+          </li>
+          <li class="section-product__item item-product item-product--four">
+            <article class="item-product__article">
+              <button class="item-product__btn">
+                <div class="item-product__picture">
+                  <img
+                    class="iten-product__img"
+                    src="img/earring-hublot-moon.png"
+                    alt="Серьги moon, HUBLOT"
+                  />
+                </div>
+                <div class="item-product__name">
+                  <h3>Серьги moon, HUBLOT</h3>
+                </div>
+                <div class="item-product__description">
+                  Желтое золото, сапфир
+                </div>
+                <div class="item-product__price">
+                  498 000 ₽
+                </div>
+              </button>
+            </article>
+          </li>
+          <li class="section-product__item item-product item-product--five">
+            <article class="item-product__article">
+              <button class="item-product__btn">
+                <div class="item-product__picture">
+                  <img
+                    class="iten-product__img"
+                    src="img/earring-win-blancpain.png"
+                    alt="серьги win, BLANCPAIN"
+                  />
+                </div>
+                <div class="item-product__name">
+                  <h3>серьги win, BLANCPAIN</h3>
+                </div>
+                <div class="item-product__description">
+                  Желтое золото, жемчуг
+                </div>
+                <div class="item-product__price">
+                  398 000 ₽
+                </div>
+              </button>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="section-slider container">
+        <h2 class="section-navigation__title">
+          Мы<br />
+          в социальных сетях
+        </h2>
+        <!-- Тут будет секция со слайдером -->
+      </section>
+      <section class="section-contact">
+        <div class="section-contact__background"></div>
+        <div class="section-contact__box">
+          <h3 class="section-contact__title">Телефон флагманского магазина</h3>
+          <a class="section-contact__telephone" href="tel:+7800456456">+7 800 456 456</a>
+          <h3 class="section-contact__title">подпишитесь на новости</h3>
+          <form class="section-contact__form form">
+            <input type="text" class="section-contact__input form__input" id="email-1" required />
+            <span class="section-contact__bar form__bar"></span>
+            <label class="section-contact__label form__label" for="email-1">Введите E-mail</label>
+            <button class="section-contact__btn form__btn" aria-label="Отправить"></button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__list list-footer">
+          <li class="list-footer__item"><a class="list-footer__link" href="#">работа в компании</a></li>
+          <li class="list-footer__item"><a class="list-footer__link" href="#">условия пользования</a></li>
+          <li class="list-footer__item"><a class="list-footer__link" href="#">выходные данные</a></li>
+          <li class="list-footer__item">
+            <a class="list-footer__link" href="#">политика конфиденциальности</a>
+          </li>
+          <li class="list-footer__item"><a class="list-footer__link" href="#">карта сайта</a></li>
+        </ul>
+        <div class="footer__box">
+          <a class="logo-link footer__logo" href="#"
+            ><img class="logo" src="img/logo-footer.png" alt="Moon River"
+          /></a>
+          <div class="footer__contact">
+            <h3 class="footer__title">телефон горячей линии</h3>
+            <address class="footer__address">
+              <a class="footer__telephone" href="tel:+7800456456">+7 800 456 456</a>
+            </address>
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--fb" href="#"></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--instagram" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__subscription">
+            <h3 class="footer__title">подпишитесь на новости</h3>
+            <form class="footer__form form-footer form">
+              <input type="text" class="form-footer__input form__input" id="email-2" required />
+              <span class="form-footer__bar form__bar"></span>
+              <label class="form-footer__label form__label" for="email-2">Введите E-mail</label>
+              <button class="form-footer__btn form__btn" aria-label="Отправить"></button>
+            </form>
+            <ul class="app-list">
+              <li class="app-list__item">
+                <a class="app-list__link app-list__link--iphone" href="#"></a>
+              </li>
+              <li class="app-list__item">
+                <a class="app-list__link app-list__link--android" href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
